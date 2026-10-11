@@ -28,7 +28,8 @@
       "fromArmored": true,
       "salvageFraction": 0.25,
       "reanimateHpFraction": 0.5,
-      "reanimateSeconds": 30
+      "reanimateSeconds": 30,
+      "reseatHeroes": false
     }
   }
 }

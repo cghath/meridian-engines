@@ -57,17 +57,22 @@ Ashlar).
   unit (yes, an enemy Bulwark too) at `reanimateHpFraction` (50%) health for `reanimateSeconds`
   (30 s), after which it crumbles and throws the Kernel out again. Possession-only: the AI and
   rote frames never reanimate wrecks.
+- **Hero wrecks can only be salvaged**, never reseated (`wrecks.reseatHeroes: false`): a
+  reanimated enemy Anvil with its aura and kit would be a mess, and reseating your own sleeping
+  hero would get around the one-hero rule.
 
 **Hero rule `dormant`**: one hero at a time, like the Choir, but you *can* wake another: when a new
 great core finishes at the Core Vault, the old hero goes still and its frame becomes a wreck (no
-blast, unlike the Directorate's overload). That wreck can be salvaged or, for 45 s, reseated.
+blast, unlike the Directorate's overload). That wreck can be salvaged, like any hero's.
 
 ### How the other sides interact with it
 
 - **Lull silence and the Lodestone's field** block seating a core and throw a seated core out, as
   decided for every faction (the Lodestone is the Engines' own version).
-- **Moth's Hijack can't take a frame:** there's no graft tissue in stone. Moth's Ghost and turret
-  jamming still work on Obelisks (they jam the turret, not a mind).
+- **Moth's Hijack takes a frame for half as long** (5 s instead of 10). There's no graft tissue in
+  stone, but the rote pattern pressed into every frame is close enough to a mind for Moth's graft
+  to grip it briefly. Proposed as `frameDurationMultiplier: 0.5` on the Directorate's `hijack` in
+  `abilities.json`. Ghost and turret jamming work on Obelisks as on any turret.
 - **Wake's strikes** knock a core out of a frame (as they knock commanders out), which makes a
   Kernel scramble rather than a lockout.
 - **Knell's link drain** has no link to drain; instead it adds heat to a possessed Engine
@@ -141,8 +146,8 @@ All Engine units count as `healable` (the Annealer mends them the way the Medic 
 - **vs the Directorate:** the Engines are out-traded in speed (Sabres, Outriders) but out-last in
   a straight fight. Breachers and Bulwarks are the threat (anti-armor); every Bulwark that dies
   becomes Engine salvage, or an Engine body. Lodestones shut down possessed heroes. Moth's Hijack
-  doesn't work on frames, which is a real loss for the Directorate in this matchup; it keeps Ghost
-  and jamming.
+  holds a frame for only half as long, so Moth hits and runs here rather than taking a Cairn
+  across the map.
 - **vs the Choir:** the Choir's chorus wants crowds, and Attract + a Crucible punishes crowds. The
   Choir's echoes and quick hops beat the Engines' 3 s reseat in skirmishes; Engine heat beats Choir
   quietness in a long hold. Knells feed wrecks.
@@ -158,7 +163,9 @@ A third profile next to `NORMAL` and `CHOIR_NORMAL` in `src/sim/opponent.ts`:
 - **Mixes:** `KILN_MIX` hewn 4, annealer 1. `FOUNDRY_MIX` cairn 2, crucible 2, spindle 1,
   lodestone 1. Lodestones and Annealers go in the front of a wave (the existing `medic` /
   `possessionBlock` ordering does that already).
-- **Salvage:** idle Delvers prefer a wreck within 20 m of the base over a far ore node.
+- **Salvage:** up to 2 Delvers work wrecks lying within 20 m of any of its buildings; the rest
+  keep mining. That gives the computer the side's economy edge without starving its ore line or
+  walking workers into a fight.
 - **Hero piloting** (`heroPilot.ts`): Ashlar raises columns between its army and the nearest enemy
   group at 15 m, then quakes when 3+ enemies are within 4 m. Cupel quenches when 3+ nearby allies
   are below 60% health, pours on the densest enemy group in range. Gnomon noon-marks the
@@ -248,11 +255,18 @@ New code, in rough order:
 - **Building rules:** the same as the game's `buildings.py`: on the footprint, on `FLOOR`, about
   the def height, Team and Glow on every building, and the Obelisk's head above its cut.
 
-## Open questions for the user
+## Decisions (2026-10-11)
 
-1. Heat and Vent as the Engines' limit: does it feel different enough from link energy?
-2. Should a Kernel be able to reseat into an **enemy** wreck (an enemy Bulwark fighting for you)?
-   This design says yes; it's the side's most memorable moment, and also its most complicated.
-3. Moth's Hijack can't take frames. That's a real nerf to Moth in this matchup. Keep it, or let
-   Hijack take a frame at reduced duration?
-4. Should the computer's Engines salvage aggressively (economy edge) or only when idle?
+The user left these to Claude ("your call"):
+
+1. **Heat and Vent stay** as the Engines' limit. Heat is per frame and builds from how hard you
+   fight, not from time, and Vent turns a hot frame into a threat. That is a different decision
+   every few seconds from a link clock or a hearing range. Tune `perShot`, `coolPerSecond` and
+   `crackFractionPerSecond` after the first play-test.
+2. **A Kernel can reseat into an enemy wreck**, for 30 s at half health. This is the side's most
+   memorable moment. **Hero wrecks are salvage only**, on every side, including the Engines'
+   own sleeping hero.
+3. **Moth's Hijack takes Engine frames at half duration** (5 s), rather than not at all. A hero's
+   signature ability shouldn't go dead in one matchup.
+4. **The computer salvages in moderation:** at most 2 Delvers, on wrecks within 20 m of its own
+   buildings.

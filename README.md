@@ -27,7 +27,8 @@ unit, hero and building built in Blender and checked against the game's model te
 - **Death throws the core free.** You play the **Kernel**, a fast, fragile spark, for 8 s, and
   roll it into another frame or a **wreck**.
 - **Wrecks are frames.** Armored units of any side leave wrecks. Delvers salvage them for ore; a
-  Kernel can drag one back to its feet for 30 s, even an enemy tank.
+  Kernel can drag one back to its feet for 30 s, even an enemy tank (heroes' wrecks are salvage
+  only).
 - **Roster:** Delver (worker), Hewn (infantry), Annealer (mends frames), Spindle (wheel scout),
   Cairn (heavy melee), Crucible (molten artillery), Lodestone (grounds enemy links).
 - **Heroes:** **Ashlar**, the Mason (walls of columns); **Cupel**, the Refiner (quenches heat,

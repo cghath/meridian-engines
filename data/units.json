@@ -1,0 +1,86 @@
+{
+  "delver": {
+    "name": "Delver", "faction": "meridian", "worker": true, "salvages": true, "cost": 50, "buildTime": 13, "supply": 1, "hotkey": "D", "healable": true,
+    "hp": 55, "armor": 1, "speed": 3.1, "accel": 9, "turnRate": 7, "radius": 0.5, "height": 1.3, "sight": 8,
+    "weapon": { "damage": 4, "range": 1.8, "cooldown": 1.2, "projectileSpeed": 40, "splash": 0 },
+    "fp": { "eyeHeight": 1.05, "drainMultiplier": 1,
+      "primary": { "kind": "drill", "damage": 6, "cooldown": 0.25, "projectileSpeed": 45, "spread": 0.03, "aimSpread": 0.03, "range": 7, "splash": 0, "auto": true },
+      "secondary": null, "abilities": { "shift": "scuttle", "q": "slagMine", "e": "fuse" } }
+  },
+  "hewn": {
+    "name": "Hewn", "faction": "meridian", "cost": 60, "buildTime": 20, "supply": 1, "hotkey": "H", "healable": true,
+    "hp": 85, "armor": 1, "speed": 2.9, "accel": 10, "turnRate": 8, "radius": 0.45, "height": 2.05, "sight": 9,
+    "weapon": { "damage": 8, "range": 7, "cooldown": 0.95, "projectileSpeed": 60, "splash": 0.5 },
+    "fp": { "eyeHeight": 1.85, "drainMultiplier": 1,
+      "primary": { "kind": "slag", "damage": 11, "cooldown": 0.38, "projectileSpeed": 95, "spread": 0.02, "aimSpread": 0.007, "range": 50, "splash": 0.8, "auto": true },
+      "secondary": "aim", "abilities": { "shift": "lurch", "q": "moltenVolley", "e": "slagPot" } }
+  },
+  "annealer": {
+    "name": "Annealer", "faction": "meridian", "medic": true, "healable": true, "cost": 75, "buildTime": 22, "supply": 1, "hotkey": "A",
+    "hp": 65, "armor": 1, "speed": 3.1, "accel": 10, "turnRate": 9, "radius": 0.45, "height": 2.2, "sight": 9,
+    "weapon": { "damage": 3, "range": 6, "cooldown": 0.8, "projectileSpeed": 70, "splash": 0 },
+    "fp": { "eyeHeight": 1.95, "drainMultiplier": 1,
+      "primary": { "kind": "spark", "damage": 5, "cooldown": 0.22, "projectileSpeed": 140, "spread": 0.014, "aimSpread": 0.005, "range": 45, "splash": 0, "auto": false },
+      "secondary": "aim", "abilities": { "shift": "scuttle", "q": "reforge", "e": "anneal" } }
+  },
+  "spindle": {
+    "name": "Spindle", "faction": "meridian", "cost": 75, "buildTime": 20, "supply": 2, "hotkey": "S", "healable": true,
+    "hp": 70, "armor": 1, "speed": 6.4, "accel": 5, "turnRate": 4, "radius": 0.6, "height": 1.9, "sight": 12,
+    "weapon": { "damage": 5, "range": 7, "cooldown": 0.6, "projectileSpeed": 90, "splash": 0 },
+    "fp": { "eyeHeight": 1.75, "drainMultiplier": 1,
+      "primary": { "kind": "spark", "damage": 5, "cooldown": 0.2, "projectileSpeed": 140, "spread": 0.014, "aimSpread": 0.004, "range": 55, "splash": 0, "auto": true },
+      "secondary": "aim", "abilities": { "shift": "spin", "q": "survey", "e": "overrun" } }
+  },
+  "cairn": {
+    "name": "Cairn", "faction": "meridian", "armored": true, "cost": 175, "buildTime": 34, "supply": 3, "hotkey": "C", "healable": true,
+    "hp": 330, "armor": 3, "speed": 2.0, "accel": 4, "turnRate": 2.6, "radius": 1.1, "height": 2.65, "sight": 9,
+    "weapon": { "melee": true, "damage": 34, "range": 2.2, "cooldown": 2.0, "splash": 1.5, "vsBuildings": 2 },
+    "fp": { "eyeHeight": 2.4, "drainMultiplier": 1,
+      "primary": { "kind": "fist", "melee": true, "damage": 48, "cooldown": 0.9, "range": 3, "arc": 1.1, "splash": 1.5, "auto": true, "vsBuildings": 2 },
+      "secondary": null, "abilities": { "shift": "topple", "q": "quake", "e": "braceStone" } }
+  },
+  "crucible": {
+    "name": "Crucible", "faction": "meridian", "armored": true, "cost": 175, "buildTime": 32, "supply": 3, "hotkey": "U", "healable": true,
+    "hp": 165, "armor": 1, "speed": 2.3, "accel": 4, "turnRate": 2.2, "turretTurnRate": 2.2, "radius": 1.0, "height": 1.95, "sight": 11,
+    "weapon": { "lob": true, "damage": 30, "range": 16, "minRange": 5, "cooldown": 3.6, "projectileSpeed": 18, "splash": 2.8, "vsBuildings": 1.5 },
+    "fp": { "eyeHeight": 1.9, "drainMultiplier": 1,
+      "primary": { "kind": "pour", "lob": true, "damage": 36, "cooldown": 2.0, "projectileSpeed": 22, "spread": 0.015, "aimSpread": 0.015, "range": 55, "splash": 3, "auto": false, "vsBuildings": 1.5 },
+      "secondary": null, "abilities": { "shift": "setLegs", "q": "spatter", "e": null } }
+  },
+  "lodestone": {
+    "name": "Lodestone", "faction": "meridian", "cost": 125, "buildTime": 24, "supply": 2, "hotkey": "L", "healable": true,
+    "hp": 150, "armor": 1, "speed": 2.8, "accel": 8, "turnRate": 7, "radius": 0.5, "height": 2.4, "sight": 10,
+    "possessionBlock": { "radius": 5, "possessedRadius": 8 },
+    "weapon": { "damage": 5, "range": 6, "cooldown": 1.0, "projectileSpeed": 70, "splash": 0 },
+    "fp": { "eyeHeight": 1.75, "drainMultiplier": 1,
+      "primary": { "kind": "flux", "damage": 6, "cooldown": 0.35, "projectileSpeed": 120, "spread": 0.012, "aimSpread": 0.004, "range": 40, "splash": 0, "auto": true },
+      "secondary": "aim", "abilities": { "shift": "lurch", "q": "attract", "e": "repel" } }
+  },
+  "ashlar": {
+    "name": "Ashlar", "faction": "meridian", "hero": true, "title": "The Mason", "armored": true, "cost": 300, "buildTime": 45, "supply": 0, "hotkey": "A", "healable": true,
+    "hp": 580, "armor": 3, "speed": 2.8, "accel": 8, "turnRate": 6, "radius": 0.75, "height": 2.95, "sight": 10,
+    "weapon": { "melee": true, "damage": 30, "range": 2.4, "cooldown": 1.4, "splash": 1.5 },
+    "aura": { "effect": "damageTaken", "radius": 10, "multiplier": 0.88 },
+    "fp": { "eyeHeight": 2.6, "drainMultiplier": 0.5,
+      "primary": { "kind": "maul", "melee": true, "damage": 60, "cooldown": 0.85, "range": 3.2, "arc": 1.2, "splash": 1.5, "auto": true },
+      "secondary": null, "abilities": { "shift": "lurch", "q": "raiseColumns", "e": "quake" } }
+  },
+  "cupel": {
+    "name": "Cupel", "faction": "meridian", "hero": true, "title": "The Refiner", "cost": 300, "buildTime": 40, "supply": 0, "hotkey": "C", "healable": true,
+    "hp": 440, "armor": 2, "speed": 3.0, "accel": 9, "turnRate": 7, "radius": 0.7, "height": 2.95, "sight": 11,
+    "weapon": { "lob": true, "damage": 16, "range": 8, "cooldown": 1.3, "projectileSpeed": 22, "splash": 2 },
+    "aura": { "effect": "fireRate", "radius": 10, "multiplier": 1.15 },
+    "fp": { "eyeHeight": 2.55, "drainMultiplier": 0.5,
+      "primary": { "kind": "ladle", "lob": true, "damage": 22, "cooldown": 0.7, "projectileSpeed": 26, "spread": 0.01, "aimSpread": 0.01, "range": 35, "splash": 2.5, "auto": true },
+      "secondary": null, "abilities": { "shift": "scuttle", "q": "quench", "e": "pour" } }
+  },
+  "gnomon": {
+    "name": "Gnomon", "faction": "meridian", "hero": true, "title": "The Long Shadow", "cost": 300, "buildTime": 40, "supply": 0, "hotkey": "G", "healable": true,
+    "hp": 360, "armor": 1, "speed": 3.4, "accel": 10, "turnRate": 8, "radius": 0.5, "height": 3.35, "sight": 13,
+    "weapon": { "damage": 40, "range": 14, "cooldown": 3.2, "projectileSpeed": 220, "splash": 0 },
+    "aura": { "effect": "damageTaken", "radius": 8, "multiplier": 0.95 },
+    "fp": { "eyeHeight": 3.05, "drainMultiplier": 0.5, "aimFov": 25,
+      "primary": { "kind": "noonLine", "damage": 55, "cooldown": 1.4, "projectileSpeed": 400, "spread": 0.006, "aimSpread": 0.0005, "range": 120, "splash": 0, "auto": false, "charge": 1.2, "chargeMultiplier": 2 },
+      "secondary": "aim", "abilities": { "shift": "shadowstep", "q": "noonMark", "e": "meridianLine" } }
+  }
+}

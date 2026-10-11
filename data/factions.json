@@ -1,0 +1,34 @@
+{
+  "meridian": {
+    "name": "The Meridian Engines",
+    "short": "Engines",
+    "blurb": "Machines of ore and column, minds that are stones. Your core seats in any frame and overdrives it, with no clock and no range, but push a frame too hard and it cracks.",
+    "main": "lodehearth",
+    "worker": "delver",
+    "supply": "plinth",
+    "army": { "hewn": 4, "spindle": 1, "cairn": 1 },
+    "possession": "core",
+    "heroRule": "dormant",
+    "heat": {
+      "max": 100,
+      "perShot": 4,
+      "perAbility": 15,
+      "coolPerSecond": 12,
+      "coolDelay": 1.5,
+      "crackFractionPerSecond": 0.06,
+      "ventDamage": 40,
+      "ventRadius": 4,
+      "ventStun": 0.8,
+      "ventCooldown": 6,
+      "reseatSeconds": 3
+    },
+    "kernel": { "seconds": 8, "speed": 9, "hp": 30, "seatRange": 2.5 },
+    "wrecks": {
+      "seconds": 45,
+      "fromArmored": true,
+      "salvageFraction": 0.25,
+      "reanimateHpFraction": 0.5,
+      "reanimateSeconds": 30
+    }
+  }
+}

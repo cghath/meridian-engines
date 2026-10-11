@@ -1,0 +1,8 @@
+{
+  "lodehearth": { "name": "Lodehearth", "faction": "meridian", "hotkey": "H", "hp": 1600, "armor": 2, "size": [6, 6], "height": 6, "cost": 400, "buildTime": 70, "supply": 10, "dropOff": true, "trains": ["delver"], "requires": [], "sight": 12 },
+  "plinth": { "name": "Plinth", "faction": "meridian", "hotkey": "P", "hp": 450, "armor": 2, "size": [3, 3], "height": 3, "cost": 100, "buildTime": 22, "supply": 8, "dropOff": false, "trains": [], "requires": [], "sight": 7 },
+  "kiln": { "name": "Kiln", "faction": "meridian", "hotkey": "K", "hp": 1050, "armor": 2, "size": [4, 4], "height": 4, "cost": 150, "buildTime": 40, "supply": 0, "dropOff": false, "trains": ["hewn", "annealer"], "requires": ["lodehearth"], "sight": 8 },
+  "foundry": { "name": "Foundry", "faction": "meridian", "hotkey": "F", "hp": 1300, "armor": 2, "size": [5, 5], "height": 5, "cost": 200, "buildTime": 50, "supply": 0, "dropOff": false, "trains": ["spindle", "cairn", "crucible", "lodestone"], "requires": ["kiln"], "sight": 8 },
+  "obelisk": { "name": "Obelisk", "faction": "meridian", "hotkey": "O", "hp": 400, "armor": 2, "size": [2, 2], "height": 3, "cost": 110, "buildTime": 26, "supply": 0, "dropOff": false, "trains": [], "requires": ["kiln"], "sight": 11, "turretTurnRate": 2.5, "weapon": { "kind": "slag", "damage": 18, "range": 10, "cooldown": 1.6, "projectileSpeed": 45, "splash": 1.4 } },
+  "coreVault": { "name": "Core Vault", "faction": "meridian", "hotkey": "V", "hp": 950, "armor": 2, "size": [4, 4], "height": 4.6, "cost": 250, "buildTime": 45, "supply": 0, "dropOff": false, "trains": ["ashlar", "cupel", "gnomon"], "requires": ["kiln"], "sight": 9 }
+}

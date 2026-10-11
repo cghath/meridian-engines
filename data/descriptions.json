@@ -1,0 +1,49 @@
+{
+  "abilities": {
+    "scuttle": "Hurry along: {speedMultiplier}x speed for {duration} s.",
+    "slagMine": "Drop a lump of live slag that bursts when an enemy steps near it: {damage} damage within {radius} m. Up to {maxActive} at once.",
+    "fuse": "Hold to fuse a damaged building or frame whole again, {repairMultiplier}x as fast as a Delver's ordinary work.",
+    "lurch": "Throw your weight the way you're moving: {speedMultiplier}x speed for {duration} s.",
+    "moltenVolley": "Spit {count} gobs of slag in a spread: {damage} damage each.",
+    "slagPot": "Lob a pot of slag that bursts after {fuse} s: {damage} damage within {radius} m.",
+    "reforge": "Set a badly cracked frame nearby back to {amount%} of its health in one heat.",
+    "anneal": "Hold to heat a damaged frame to glowing and let it set whole: {amount} health a second.",
+    "spin": "Spin the wheel up: {speedMultiplier}x speed for {duration} s.",
+    "survey": "Ring the ground and listen to it come back: see everything within {radius} m for {duration} s, through the fog.",
+    "overrun": "Roll straight through them: {damage} damage and a {knockback} m shove to whatever you hit.",
+    "topple": "Lean in and fall forward: {damage} damage and a {knockback} m shove to whatever you hit.",
+    "quake": "Bring both fists down: {damage} damage within {radius} m, and they move at {slowMultiplier%} speed for {slowDuration} s.",
+    "braceStone": "Lock every column in place: absorbs {absorb} damage for {duration} s.",
+    "setLegs": "Plant the four legs. While set, you deal {damageMultiplier}x damage at {rangeMultiplier}x range, but you can't walk.",
+    "spatter": "Fling the crucible's dregs: {count} splashes of {damage} damage, spread over {distance} m.",
+    "attract": "Throw a pulse that drags enemies within {radius} m of where it lands {distance} m toward its middle, slowed to {slowMultiplier%} for {slowDuration} s.",
+    "repel": "Flip the field: {damage} damage to everything within {radius} m, shoved {knockback} m away.",
+    "raiseColumns": "Call a row of columns up out of the ground, {width} m wide, for {duration} s. Shots stop at them; so does everyone.",
+    "quench": "Pour off the heat: every frame of yours within {radius} m drops to no heat at once and mends {amount%} of its health.",
+    "pour": "Tip the ladle: a pool of molten ore {radius} m across where it lands, burning anything standing in it for {damage} damage a second, for {duration} s.",
+    "shadowstep": "Step {distance} m along your own shadow.",
+    "noonMark": "Mark a target in noon light: for {duration} s it takes {damageMultiplier}x damage from everything, and every ally sees it.",
+    "meridianLine": "Your next shot runs straight through everything in a line, at {damageMultiplier}x damage.",
+    "vent": "Dump this frame's heat as a ring of slag around you. Everything near you is burned and staggered; you are too, for a moment."
+  },
+  "units": {
+    "delver": "Digs ore and stacks columns into buildings. Also strips wrecks for ore: anything armored that dies leaves one for a while.",
+    "hewn": "The Engines' line soldier: a stocky frame that throws slag. Slower than a Trooper, but it takes a beating.",
+    "annealer": "Mends frames: heats the cracks closed. Repairs Engine units the way a Medic heals soldiers.",
+    "spindle": "A fast scout that rolls on one great wheel. Slow to get going, hard to stop.",
+    "cairn": "A walking pile of columns that fights with its fists. Tough, slow, and very bad for buildings.",
+    "crucible": "Artillery: lobs molten ore a long way. Can't hit anything too close.",
+    "lodestone": "Throws a field that grounds the link: no enemy can possess anything near it, and a possessed enemy is thrown out.",
+    "ashlar": "The Mason, a front-line hero. Swings a whole column, raises walls of columns out of the ground, and makes allies near it harder to hurt.",
+    "cupel": "The Refiner, a support hero. Lobs molten ore, pours burning pools, and quenches the heat out of every frame around it. Allies near it fire faster.",
+    "gnomon": "The Long Shadow, a marksman hero. The longest reach of any frame; its shots can run straight through a line of enemies."
+  },
+  "buildings": {
+    "lodehearth": "The Engines' heart: a pit of molten ore where cores condense. Makes Delvers and takes the ore they bring. Lose every one and you lose the match.",
+    "plinth": "Raises your supply limit.",
+    "kiln": "Fires Hewn and Annealers out of ore.",
+    "foundry": "Casts Spindles, Cairns, Crucibles and Lodestones.",
+    "obelisk": "A defense column that lobs slag at enemies in range.",
+    "coreVault": "Wakes great cores: your heroes. Only one burns at a time; wake another and the old one sleeps, and its frame falls in."
+  }
+}
